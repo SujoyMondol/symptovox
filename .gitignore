@@ -1,0 +1,133 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+# ---------------------------------------------------------
+# Frontend (Next.js / Node)
+# ---------------------------------------------------------
+
+# dependencies
+symptovox-frontend/node_modules
+symptovox-frontend/.pnp
+symptovox-frontend/.pnp.*
+symptovox-frontend/.yarn/*
+!symptovox-frontend/.yarn/patches
+!symptovox-frontend/.yarn/plugins
+!symptovox-frontend/.yarn/releases
+!symptovox-frontend/.yarn/versions
+
+# testing
+symptovox-frontend/coverage
+
+# next.js build
+symptovox-frontend/.next
+symptovox-frontend/out
+
+# production build
+symptovox-frontend/build
+
+# debug / logs
+symptovox-frontend/npm-debug.log*
+symptovox-frontend/yarn-debug.log*
+symptovox-frontend/yarn-error.log*
+symptovox-frontend/.pnpm-debug.log*
+
+# env files
+symptovox-frontend/.env*
+
+# vercel
+symptovox-frontend/.vercel
+
+# typescript
+symptovox-frontend/*.tsbuildinfo
+symptovox-frontend/next-env.d.ts
+
+
+# ---------------------------------------------------------
+# Backend (Python: FastAPI/Flask/etc.)
+# ---------------------------------------------------------
+
+# bytecode
+symptovox-backend/__pycache__/
+symptovox-backend/*.py[cod]
+symptovox-backend/*$py.class
+
+# environments
+symptovox-backend/.env
+symptovox-backend/.venv
+symptovox-backend/venv/
+symptovox-backend/env/
+symptovox-backend/.python-version
+
+# packaging
+symptovox-backend/build/
+symptovox-backend/dist/
+symptovox-backend/*.egg-info/
+symptovox-backend/.eggs/
+
+# logs
+symptovox-backend/*.log
+
+# sqlite / db files
+symptovox-backend/*.sqlite3
+symptovox-backend/*.db
+
+# testing / coverage
+symptovox-backend/.pytest_cache/
+symptovox-backend/.coverage
+symptovox-backend/.mypy_cache/
+symptovox-backend/.tox/
+symptovox-backend/.nox/
+symptovox-backend/.hypothesis/
+
+# Jupyter
+symptovox-backend/.ipynb_checkpoints
+
+# misc
+symptovox-backend/.DS_Store
+symptovox-backend/Thumbs.db
+
+
+# ---------------------------------------------------------
+# OS-level junk (applies everywhere)
+# ---------------------------------------------------------
+
+.DS_Store
+Thumbs.db
