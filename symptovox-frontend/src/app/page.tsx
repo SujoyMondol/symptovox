@@ -1,11 +1,22 @@
 /*eslint-disable*/
 'use client';
 import { useState } from 'react';
+import { useRouter } from "next/navigation";
 import { Mic, Activity, Stethoscope, Heart, Zap, Shield, Users, ArrowRight, Play, CheckCircle, Star, Volume2, Brain } from 'lucide-react';
 
 export default function Home() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
+   const router = useRouter();
+
+   const handleVoiceRequest = () => {
+     router.push('/voice-input');
+   }
+
+
+  const handleHowItWorks = () => {
+    router.push('/how-it-works');
+  }
   const features = [
     {
       icon: <Mic className="w-8 h-8" />,
@@ -49,7 +60,8 @@ export default function Home() {
               SymptoVox
             </span>
           </div>
-          <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-full font-semibold hover:from-blue-600 hover:to-purple-600 transition-all shadow-lg">
+          <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-full font-semibold hover:from-blue-600 hover:to-purple-600 transition-all shadow-lg"
+            onClick={handleVoiceRequest}>
             Try Demo
           </button>
         </div>
@@ -74,11 +86,13 @@ export default function Home() {
           </p>
           
           <div className="flex justify-center space-x-4 mb-16">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all flex items-center space-x-2 shadow-xl hover:shadow-2xl">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all flex items-center space-x-2 shadow-xl hover:shadow-2xl"
+              onClick={handleVoiceRequest}>
               <Play className="w-5 h-5" />
               <span>Start Voice Demo</span>
             </button>
-            <button className="border border-gray-600 text-gray-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800/50 transition-all">
+            <button className="border border-gray-600 text-gray-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800/50 transition-all"
+              onClick={handleHowItWorks}>
               How It Works
             </button>
           </div>
